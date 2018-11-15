@@ -9,7 +9,11 @@ import java.util.Date;
 
 @Entity
 public class Contrat implements Serializable {
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5559617729104224293L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codec;
     private Date debutC;

@@ -2,14 +2,17 @@ package com.joes.gestion.entity;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
 public class TypeContrat implements Serializable{
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1394151079752445784L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int idC;
     private String descriptionC;

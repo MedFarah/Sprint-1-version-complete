@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class EmployeService {
 
     private final EmployeRepository employeRepository;
@@ -43,8 +46,4 @@ public class EmployeService {
         return getAll().stream().filter(user-> user.getLogin().equals(email)&& user.getMdp().equals(pass)).findAny().orElse(null);
     }
 
-//    public List<Employe> oldEmployes(){
-//
-//        return getAll().stream().filter(user-> user.getContrat().stream().filter(contrat -> contrat.getFinC().compareTo(new Date())==))
-//    }
 }

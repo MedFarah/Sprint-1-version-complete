@@ -3,7 +3,7 @@ package com.joes.gestion.entity;
 
 
 import javax.persistence.CascadeType;
-import javax.persistence.DiscriminatorValue;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -12,18 +12,19 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity
-//@DiscriminatorValue(value="e")
+
 public class Employe extends Utilisateur  {
 
     private double salaire;
 
     @OneToOne
-    @JsonIgnore
+    
     private Dossier dossier;
 
     @ManyToOne
@@ -68,10 +69,12 @@ public class Employe extends Utilisateur  {
         this.contrat = contrat;
     }
 
+    @JsonIgnore
     public Dossier getDossier() {
         return dossier;
     }
-
+    
+    @JsonSetter
     public void setDossier(Dossier dossier) {
         this.dossier = dossier;
     }

@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class ContratService {
 
     private final ContratRepository contratRepository;

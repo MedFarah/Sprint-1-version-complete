@@ -1,8 +1,6 @@
 package com.joes.gestion.entity;
 
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
