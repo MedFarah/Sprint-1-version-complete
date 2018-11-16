@@ -1,6 +1,6 @@
 package com.joes.gestion.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import java.io.Serializable;
 
@@ -22,7 +22,7 @@ public class Dossier implements Serializable {
     private Boolean copieCarteCin;
     private Boolean etatDossier;
     @OneToOne
-    @JsonIgnore
+    //@JsonIgnore
     private Employe employe;
 
 

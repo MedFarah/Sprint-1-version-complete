@@ -4,10 +4,11 @@ import com.joes.gestion.dao.DossierRepository;
 import com.joes.gestion.entity.Dossier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
+
 
 @Service
 @Transactional

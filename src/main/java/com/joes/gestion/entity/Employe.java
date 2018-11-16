@@ -33,10 +33,12 @@ public class Employe extends Utilisateur  {
     private TypePost typePost;
 
     @OneToMany(mappedBy="employe",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
-    
     private List<Contrat> contrat;
 
+    @OneToMany( mappedBy = "employe",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    private List<Conge> conges;
 
+    
     public Employe(int cin, String nom, String prenom, String adresse, String login, String mdp, Date dateNaiss, int tel,double salaire) {
         this.cin = cin;
         this.nom = nom;
